@@ -1,4 +1,4 @@
-public class Figura {
+public abstract class Figura {
     protected float area;
 
     public Figura() {
@@ -8,4 +8,6 @@ public class Figura {
     public float accedeArea() {
         return area;
     }
+    
+    abstract public void calculaArea();
 }
