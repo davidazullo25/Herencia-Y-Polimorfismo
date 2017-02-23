@@ -10,4 +10,8 @@ public abstract class Figura {
     }
     
     abstract public void calculaArea();
+    
+    public String toString() {
+        return ""+area;
+    }
 }

@@ -8,4 +8,9 @@ public class Cuadrado extends Figura{
     public void calculaArea() {
         area = lado*lado;
     }
+    
+    @Override
+    public String toString() {
+        return "Cuadrado con area = "+super.toString();
+    }
 }

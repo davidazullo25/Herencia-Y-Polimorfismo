@@ -22,12 +22,12 @@ public class Principal {
         for(int i=0;i<f.length;i++) 
             f[i].calculaArea();
         for(int i=0;i<f.length;i++)
-            System.out.println(f[i].accedeArea());
+            System.out.println(f[i]);
             
         for(Figura i:f)
             i.calculaArea();
         for(Figura i:f)
-            System.out.println(i.accedeArea());
+            System.out.println(i);
             
         while(it.hasNext()) {
             actual=it.next();
@@ -36,7 +36,10 @@ public class Principal {
         it = a.iterator();
         while(it.hasNext()) {
             actual=it.next();
-            System.out.println(actual.accedeArea());
+            System.out.println(actual);
         }
+        
+        for(Figura i:f)
+            System.out.println(i);
     }
 }

@@ -10,4 +10,9 @@ public class Triangulo extends Figura {
     public void calculaArea() {
         area = base*altura/2;
     }
+    
+    @Override
+    public String toString() {
+        return "Triangulo con area = "+super.toString();
+    }
 }
