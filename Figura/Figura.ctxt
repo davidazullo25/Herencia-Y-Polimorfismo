@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ calculaArea()
 comment3.params=
 comment3.target=java.lang.String\ toString()
-numComments=4
+comment4.params=o
+comment4.target=boolean\ equals(java.lang.Object)
+numComments=5

@@ -41,5 +41,13 @@ public class Principal {
         
         for(Figura i:f)
             System.out.println(i);
+            
+        Triangulo t3 = new Triangulo(5, 10);
+        Cuadrado s3 = new Cuadrado(5);    
+        Circulo c3 = new Circulo(12);    
+        Circulo c4 = new Circulo(12); 
+            
+        System.out.println(t3.equals(s3));
+        System.out.println(c3.equals(c4));
     }
 }

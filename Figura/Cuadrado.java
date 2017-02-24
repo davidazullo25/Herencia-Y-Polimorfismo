@@ -5,6 +5,10 @@ public class Cuadrado extends Figura{
         this.lado = lado;
     }
     
+    public float accedeLado() {
+        return lado;
+    }
+    
     public void calculaArea() {
         area = lado*lado;
     }
@@ -12,5 +16,12 @@ public class Cuadrado extends Figura{
     @Override
     public String toString() {
         return "Cuadrado con area = "+super.toString();
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Cuadrado)
+            return this.accedeLado() == ((Cuadrado)o).accedeLado();
+        else return super.equals(o);
     }
 }

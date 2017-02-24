@@ -7,6 +7,14 @@ public class Triangulo extends Figura {
         altura = a;
     }
     
+    public float accedeBase() {
+        return base;
+    }
+    
+    public float accedeAltura() {
+        return altura;
+    }
+    
     public void calculaArea() {
         area = base*altura/2;
     }
@@ -14,5 +22,13 @@ public class Triangulo extends Figura {
     @Override
     public String toString() {
         return "Triangulo con area = "+super.toString();
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Triangulo)
+            return this.accedeBase() == ((Triangulo)o).accedeBase()
+                && this.accedeAltura() == ((Triangulo)o).accedeAltura();
+        else return super.equals(o);
     }
 }
