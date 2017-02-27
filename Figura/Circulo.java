@@ -9,8 +9,13 @@ public class Circulo extends Figura{
         return radio;
     }
     
+    @Override
     public void calculaArea() {
         area = (float)3.1416*radio*radio;
+    }
+    
+    @Override
+    public void dibuja(){
     }
     
     @Override

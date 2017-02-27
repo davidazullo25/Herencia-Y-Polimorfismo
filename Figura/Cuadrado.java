@@ -9,8 +9,13 @@ public class Cuadrado extends Figura{
         return lado;
     }
     
+    @Override
     public void calculaArea() {
         area = lado*lado;
+    }
+    
+    @Override
+    public void dibuja(){
     }
     
     @Override

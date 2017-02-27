@@ -15,8 +15,13 @@ public class Triangulo extends Figura {
         return altura;
     }
     
+    @Override
     public void calculaArea() {
         area = base*altura/2;
+    }
+    
+    @Override
+    public void dibuja(){
     }
     
     @Override
