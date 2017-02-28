@@ -1,3 +1,6 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 public class Circulo extends Figura{
     private float radio;
     
@@ -15,7 +18,7 @@ public class Circulo extends Figura{
     }
     
     @Override
-    public void dibuja(){
+    public void dibuja(Graphics g){
     }
     
     @Override

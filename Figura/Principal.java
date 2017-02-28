@@ -49,5 +49,8 @@ public class Principal {
             
         System.out.println(t3.equals(s3));
         System.out.println(c3.equals(c4));
+        
+        Ventana vent = new Ventana(400, 400);
+        vent.setVisible(true);
     }
 }

@@ -1,13 +1,29 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 public abstract class Figura {
     protected float area;
+    private int posx;
+    private int posy;
 
-    public Figura() {
-        area = 0;
+    public Figura(int x, int y) {
+        posx = x;
+        posy = y;
     }
     
-    public float accedeArea() {
+    protected float accedeArea() {
         return area;
     }
+    
+    protected int dimeX() {
+        return posx;
+    }
+    
+    protected int dimeY() {
+        return posy;
+    }
+    
+    abstract public void dibuja(Graphics g);
     
     abstract public void calculaArea();
     
