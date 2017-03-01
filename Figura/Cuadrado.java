@@ -1,8 +1,14 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+
 public class Cuadrado extends Figura{
     private float lado;
     
-    public Cuadrado(float lado) {
+    public Cuadrado(int x, int y, float lado) {
+        super(x, y);
         this.lado = lado;
+        setColor(new Color(0, 127, 127));
     }
     
     public float accedeLado() {
@@ -15,7 +21,7 @@ public class Cuadrado extends Figura{
     }
     
     @Override
-    public void dibuja(){
+    public void dibuja(Graphics g){
     }
     
     @Override

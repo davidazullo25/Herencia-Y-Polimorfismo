@@ -1,10 +1,16 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+
 public class Triangulo extends Figura {
     private float base;
-    private float altura;
+    private float altura;    
     
-    public Triangulo(float b, float a) {
+    public Triangulo(int x, int y, float b, float a) {
+        super(x, y);
         base = b;
         altura = a;
+        setColor(new Color(0, 0, 127));
     }
     
     public float accedeBase() {
@@ -21,7 +27,7 @@ public class Triangulo extends Figura {
     }
     
     @Override
-    public void dibuja(){
+    public void dibuja(Graphics g){
     }
     
     @Override

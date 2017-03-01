@@ -13,5 +13,7 @@ public class Lienzo extends JPanel{
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D)g;
+        for(Figura f:figuras)
+            f.dibuja(g);
     }
 }

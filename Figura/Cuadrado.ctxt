@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.params=lado
-comment0.target=Cuadrado(float)
+comment0.params=x\ y\ lado
+comment0.target=Cuadrado(int,\ int,\ float)
 comment1.params=
 comment1.target=float\ accedeLado()
 comment2.params=
 comment2.target=void\ calculaArea()
-comment3.params=
-comment3.target=void\ dibuja()
+comment3.params=g
+comment3.target=void\ dibuja(java.awt.Graphics)
 comment4.params=
 comment4.target=java.lang.String\ toString()
 comment5.params=o

@@ -1,11 +1,14 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Color;
 
 public class Circulo extends Figura{
     private float radio;
     
-    public Circulo(int radio) {
+    public Circulo(int x, int y, int radio) {
+        super(x, y);
         this.radio = radio;
+        setColor(new Color(127, 127, 255));
     }
     
     public float accedeRadio() {
