@@ -15,6 +15,6 @@ public class Banco {
         int suma = 0;
         for(CuentaBancaria cuenta:cuentas)
             suma += cuenta.getSaldo();
-        return suma/cuentas.size();
+        return (float)suma/cuentas.size();
     }
 }

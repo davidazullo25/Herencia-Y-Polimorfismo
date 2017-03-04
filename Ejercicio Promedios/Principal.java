@@ -8,5 +8,11 @@ public class Principal {
         banco.agregarCuenta(new CuentaBancaria(200));
         banco.agregarCuenta(new CuentaBancaria(300));
         System.out.println(banco.calcularSaldoPromedio());
+        
+        Planeta planeta = new Planeta();
+        planeta.agregarPais(new Pais(25));
+        planeta.agregarPais(new Pais(32));
+        planeta.agregarPais(new Pais(94));
+        System.out.println(planeta.calcularHabitantesPromedio());
     }
 }
