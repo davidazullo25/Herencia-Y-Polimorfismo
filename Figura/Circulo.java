@@ -22,6 +22,8 @@ public class Circulo extends Figura{
     
     @Override
     public void dibuja(Graphics g){
+        Graphics2D circulo = (Graphics2D) g;
+        circulo.fillOval(dimeX(), dimeY(), (int) radio*2, (int) radio*2);
     }
     
     @Override

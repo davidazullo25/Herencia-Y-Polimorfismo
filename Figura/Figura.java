@@ -16,6 +16,10 @@ public abstract class Figura {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    public Color getColor() {
+        return color;
+    }
     
     protected float accedeArea() {
         return area;

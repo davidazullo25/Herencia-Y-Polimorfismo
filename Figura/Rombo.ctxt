@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=x\ y\ diagonalMayor\ diagonalMenor
+comment0.target=Rombo(int,\ int,\ float,\ float)
+comment1.params=
+comment1.target=float\ accedeDiagonalMayor()
+comment2.params=
+comment2.target=float\ accedeDiagonalMenor()
+comment3.params=
+comment3.target=void\ calculaArea()
+comment4.params=g
+comment4.target=void\ dibuja(java.awt.Graphics)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=o
+comment6.target=boolean\ equals(java.lang.Object)
+numComments=7

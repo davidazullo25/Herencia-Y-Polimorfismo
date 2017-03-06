@@ -1,7 +1,7 @@
 import java.util.*;
 public class Principal {
     public static void main(String [] args) {
-        Triangulo t1 = new Triangulo(100, 100, 3, 4);
+        /*Triangulo t1 = new Triangulo(100, 100, 3, 4);
         Circulo c1 = new Circulo(200, 200, 10);
         Cuadrado s1 = new Cuadrado(300, 300, 5);
         Figura []f = new Figura[3];
@@ -49,7 +49,7 @@ public class Principal {
             
         System.out.println(t3.equals(s3));
         System.out.println(c3.equals(c4));
-        
+        */
         Ventana vent = new Ventana(400, 400);
         vent.setVisible(true);
     }

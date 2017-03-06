@@ -21,7 +21,9 @@ public class Cuadrado extends Figura{
     }
     
     @Override
-    public void dibuja(Graphics g){
+    public void dibuja(Graphics g) {
+        Graphics2D cuadrado = (Graphics2D) g;
+        cuadrado.fillRect(dimeX(), dimeY(), (int)lado, (int)lado);
     }
     
     @Override

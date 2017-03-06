@@ -28,6 +28,10 @@ public class Rombo extends Figura{
     
     @Override
     public void dibuja(Graphics g){
+        Graphics2D rombo = (Graphics2D) g;
+        int []cX = {dimeX(), dimeX()-(int)diagonalMenor/2, dimeX(), dimeX()+(int)diagonalMenor/2};
+        int []cY = {dimeY(), dimeY()+(int)diagonalMayor/2, dimeY()+(int)diagonalMayor, dimeY()+(int)diagonalMayor/2};
+        rombo.fillPolygon(cX, cY, 4);
     }
     
     @Override
@@ -38,8 +42,8 @@ public class Rombo extends Figura{
     @Override
     public boolean equals(Object o) {
         if(o instanceof Rombo)
-            return this.diagonalMayor() == ((Rombo)o).diagonalMayor()
-                && this.diagonalMenor() == ((Rombo)o).diagonalMenor();
+            return this.accedeDiagonalMayor() == ((Rombo)o).accedeDiagonalMayor()
+                && this.accedeDiagonalMenor() == ((Rombo)o).accedeDiagonalMenor();
         else return super.equals(o);
     }
 }

@@ -28,6 +28,10 @@ public class Triangulo extends Figura {
     
     @Override
     public void dibuja(Graphics g){
+        Graphics2D triangulo = (Graphics2D) g;
+        int []cX = {dimeX(), dimeX()-(int)base/2, dimeX()+(int)base/2};
+        int []cY = {dimeY(), dimeY()+(int)altura, dimeY()+(int)altura};
+        triangulo.fillPolygon(cX, cY, 3);
     }
     
     @Override
