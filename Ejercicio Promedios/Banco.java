@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Banco {
+public class Banco{
     ArrayList<CuentaBancaria> cuentas;
     
     public Banco() {
@@ -11,10 +11,7 @@ public class Banco {
         cuentas.add(cuenta);
     }
     
-    public float calcularSaldoPromedio() {
-        int suma = 0;
-        for(CuentaBancaria cuenta:cuentas)
-            suma += cuenta.getSaldo();
-        return (float)suma/cuentas.size();
+    public ArrayList<CuentaBancaria> getCuentas() {
+        return cuentas;
     }
 }

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Planeta {
+public class Planeta{
     ArrayList<Pais> paises;
     
     public Planeta() {
@@ -11,10 +11,7 @@ public class Planeta {
         paises.add(pais);
     }
     
-    public float calcularHabitantesPromedio() {
-        int suma = 0;
-        for(Pais pais:paises)
-            suma += pais.getHabitantes();
-        return (float)suma/paises.size();
+    public ArrayList<Pais> getPaises() {
+        return paises;
     }
 }
