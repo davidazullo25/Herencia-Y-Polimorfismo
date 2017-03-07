@@ -7,12 +7,12 @@ public class Principal {
         banco.agregarCuenta(new CuentaBancaria(100));
         banco.agregarCuenta(new CuentaBancaria(200));
         banco.agregarCuenta(new CuentaBancaria(300));
-        System.out.println(Utileria.calculaPromedio(banco.getCuentas()));
+        System.out.println(Utileria.calculaPromedio(banco.getDatos()));
         
         Planeta planeta = new Planeta();
         planeta.agregarPais(new Pais(25));
         planeta.agregarPais(new Pais(32));
         planeta.agregarPais(new Pais(94));
-        System.out.println(Utileria.calculaPromedio(planeta.getPaises()));
+        System.out.println(Utileria.calculaPromedio(planeta.getDatos()));
     }
 }

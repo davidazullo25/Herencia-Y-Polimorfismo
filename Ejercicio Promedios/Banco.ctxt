@@ -4,5 +4,5 @@ comment0.target=Banco()
 comment1.params=cuenta
 comment1.target=void\ agregarCuenta(CuentaBancaria)
 comment2.params=
-comment2.target=java.util.ArrayList\ getCuentas()
+comment2.target=java.util.ArrayList\ getDatos()
 numComments=3

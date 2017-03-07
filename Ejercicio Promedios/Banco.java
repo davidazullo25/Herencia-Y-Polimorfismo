@@ -11,7 +11,10 @@ public class Banco{
         cuentas.add(cuenta);
     }
     
-    public ArrayList<CuentaBancaria> getCuentas() {
-        return cuentas;
+    public ArrayList<Medible> getDatos() {
+        ArrayList<Medible> c = new ArrayList<Medible>();
+        for(CuentaBancaria cuenta:cuentas)
+            c.add((Medible)cuenta);
+        return c;
     }
 }

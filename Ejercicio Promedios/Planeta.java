@@ -10,8 +10,11 @@ public class Planeta{
     public void agregarPais(Pais pais) {
         paises.add(pais);
     }
-    
-    public ArrayList<Pais> getPaises() {
-        return paises;
+        
+    public ArrayList<Medible> getDatos() {
+        ArrayList<Medible> p = new ArrayList<Medible>();
+        for(Pais pais:paises)
+            p.add((Medible)pais);
+        return p;
     }
 }

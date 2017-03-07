@@ -4,5 +4,5 @@ comment0.target=Planeta()
 comment1.params=pais
 comment1.target=void\ agregarPais(Pais)
 comment2.params=
-comment2.target=java.util.ArrayList\ getPaises()
+comment2.target=java.util.ArrayList\ getDatos()
 numComments=3
