@@ -28,4 +28,24 @@ public class Pelota {
         if(posy<=radio||posy+radio>=r.getHeight())
             incy *= -1;
     }
+    
+    public void mueveteArriba() {
+        if(posy>radio)
+            posy -= Math.abs(incy);        
+    }
+    
+    public void mueveteAbajo(Rectangle r) {
+        if(posy+radio<r.getHeight())
+            posy += Math.abs(incy);        
+    } 
+    
+    public void mueveteIzquierda() {
+        if(posx>radio)
+            posx -= Math.abs(incx);        
+    }
+    
+    public void mueveteDerecha(Rectangle r) {
+        if(posx+radio<r.getWidth())
+            posx += Math.abs(incx);        
+    } 
 }

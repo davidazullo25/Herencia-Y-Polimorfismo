@@ -7,10 +7,13 @@ import java.awt.event.ActionEvent;
 
 public class Ventana extends JFrame implements KeyListener, ActionListener {
     private Lienzo dibujo;
+    private boolean pausa;
+    private Timer tiempo;
     
     public Ventana(int ancho, int alto) {
+        pausa = false;
         this.addKeyListener(this);
-        Timer tiempo = new Timer(50, this);        
+        tiempo = new Timer(50, this);        
         tiempo.start();
         this.setSize(ancho, alto);
         dibujo = new Lienzo();
@@ -19,15 +22,26 @@ public class Ventana extends JFrame implements KeyListener, ActionListener {
     }
     
     public void keyReleased(KeyEvent e) {
-        System.out.println("released: "+e.getKeyChar());
+        if(e.getKeyChar()==' ') {
+            pausa = !pausa;
+            if(pausa)
+                tiempo.stop();
+            else tiempo.start();
+        }
     }
     
     public void keyPressed(KeyEvent e) {
-        System.out.println("pressed: "+e.getKeyChar());
+        if(e.getKeyChar()=='a')
+            dibujo.redibuja(-1,0);
+        if(e.getKeyChar()=='d')
+            dibujo.redibuja(1,0);
+        if(e.getKeyChar()=='w')
+            dibujo.redibuja(0,1);
+        if(e.getKeyChar()=='s')
+            dibujo.redibuja(0,-1);
     }
     
     public void keyTyped(KeyEvent e) {
-        System.out.println("typed: "+e.getKeyChar());
     }
     
     public void actionPerformed(ActionEvent e) {
