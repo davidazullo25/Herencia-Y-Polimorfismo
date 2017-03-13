@@ -1,36 +1,56 @@
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
+import java.util.LinkedList;
 
 public class Lienzo extends JPanel {
-    private Pelota pelota;
+    private LinkedList<Pelota> pelotas;
     
     public Lienzo() {
-        pelota = new Pelota(100, 100, 10);
+        pelotas = new LinkedList<Pelota>();
+        pelotas.add( new Pelota(100, 100, 10) );
+        EscuchadorRaton escuchadorRaton = new EscuchadorRaton();
+        this.addMouseListener(escuchadorRaton);
     }
     
     public void redibuja() {
-        pelota.muevete(getBounds());
+        Rectangle r = getBounds();
+        for(Pelota pelota:pelotas)
+            pelota.muevete(r);
         repaint();
     }
     
     public void redibuja(int incrementoX, int incrementoY) {
-        if(incrementoY==1)
-            pelota.mueveteArriba();
-        if(incrementoY==-1)
-            pelota.mueveteAbajo(getBounds());
-        if(incrementoX==1)
-            pelota.mueveteDerecha(getBounds());
-        if(incrementoX==-1)
-            pelota.mueveteIzquierda();
+        for(Pelota pelota:pelotas) {
+            if(incrementoY==1)
+                pelota.mueveteArriba();
+            if(incrementoY==-1)
+                pelota.mueveteAbajo(getBounds());
+            if(incrementoX==1)
+                pelota.mueveteDerecha(getBounds());
+            if(incrementoX==-1)
+                pelota.mueveteIzquierda();
+        }
         repaint();
     }
     
     @Override
     public void paintComponent(Graphics g) {
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, getWidth(), getHeight());
+        super.paintComponent(g);
         g.setColor(Color.BLUE);
-        pelota.dibuja(g);
+        for(Pelota pelota:pelotas)
+            pelota.dibuja(g);
+    }
+    
+    class EscuchadorRaton extends MouseAdapter {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            pelotas.add( new Pelota(e.getX(), e.getY(), (int)(Math.random()*25)+5) );
+            repaint();            
+        }
     }
 }

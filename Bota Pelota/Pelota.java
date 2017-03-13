@@ -12,8 +12,15 @@ public class Pelota {
         this.posx = x;
         this.posy = y;
         this.radio = r;
-        incx = 5;
-        incy = 5;
+        int size = 20;
+        int azar = (int)(Math.random()*2);
+        if(azar==0)
+            azar = -1;
+        incx = size*azar;
+        azar = (int)(Math.random()*2);
+        if(azar==0)
+            azar = -1;
+        incy = size*azar;
     }
     
     public void dibuja(Graphics g) {

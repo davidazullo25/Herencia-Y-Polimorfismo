@@ -41,8 +41,7 @@ public class Ventana extends JFrame implements KeyListener, ActionListener {
             dibujo.redibuja(0,-1);
     }
     
-    public void keyTyped(KeyEvent e) {
-    }
+    public void keyTyped(KeyEvent e) { }
     
     public void actionPerformed(ActionEvent e) {
         dibujo.redibuja();
